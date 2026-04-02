@@ -23,13 +23,13 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.100  # 🔒 versão fixa (evita inconsistência)
-
+        
     - name: Restore dependencies
-      run: dotnet restore Gerenciamento.API/Gerenciamento.API.csproj
+      run: dotnet restore Gerenciamento.API/GerenciamentoPatrimonio.csproj
 
     - name: Build
-      run: dotnet build Gerenciamento.API/Gerenciamento.API.csproj --no-restore
-
+      run: dotnet build Gerenciamento.API/GerenciamentoPatrimonio.csproj --no-restore
+      
     - name: Cache NuGet packages
       uses: actions/cache@v4
       with:
