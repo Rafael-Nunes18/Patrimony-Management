@@ -25,11 +25,10 @@ jobs:
         dotnet-version: 8.0.100  # 🔒 versão fixa (evita inconsistência)
 
     - name: Restore dependencies
-      # Adicionamos o caminho para a pasta onde está o projeto/solution
-      run: dotnet restore GerenciamentoPatrimonio.slnx 
+      run: dotnet restore Gerenciamento.API/Gerenciamento.API.csproj
 
     - name: Build
-      run: dotnet build GerenciamentoPatrimonio.slnx --no-restore
+      run: dotnet build Gerenciamento.API/Gerenciamento.API.csproj --no-restore
 
     - name: Cache NuGet packages
       uses: actions/cache@v4
