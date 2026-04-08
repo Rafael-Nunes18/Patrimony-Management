@@ -1,6 +1,6 @@
 ﻿namespace GestaoPatrimonios_v1.DTOs.EnderecoDto
 {
-    public class ListarEnderecoDto
+    public class ListarEnderecoDTO
     {
         public Guid EnderecoID { get; set; }
         public string Logradouro { get; set; } = string.Empty;

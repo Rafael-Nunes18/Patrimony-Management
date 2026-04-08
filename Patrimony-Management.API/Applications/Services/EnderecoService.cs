@@ -15,11 +15,11 @@ namespace GerenciamentoPatrimonio.Applications.Services
             _repository = repository;
         }
 
-        public List<ListarEnderecoDto> Listar()
+        public List<ListarEnderecoDTO> Listar()
         {
             List<Endereco> enderecos = _repository.Listar();
 
-            List<ListarEnderecoDto> enderecosDto = enderecos.Select(endereco => new ListarEnderecoDto
+            List<ListarEnderecoDTO> enderecosDto = enderecos.Select(endereco => new ListarEnderecoDTO
             {
                 EnderecoID = endereco.EnderecoID,
                 Logradouro = endereco.Logradouro,
@@ -31,7 +31,7 @@ namespace GerenciamentoPatrimonio.Applications.Services
             return enderecosDto;
         }
 
-        public ListarEnderecoDto BuscarPorId(Guid enderecoId)
+        public ListarEnderecoDTO BuscarPorId(Guid enderecoId)
         {
             Endereco endereco = _repository.BuscarPorId(enderecoId);
 
@@ -40,7 +40,7 @@ namespace GerenciamentoPatrimonio.Applications.Services
                 throw new DomainException("Endereço não encontrado.");
             }
 
-            return new ListarEnderecoDto
+            return new ListarEnderecoDTO
             {
                 EnderecoID = endereco.EnderecoID,
                 Logradouro = endereco.Logradouro,

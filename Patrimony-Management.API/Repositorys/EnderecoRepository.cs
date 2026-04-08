@@ -59,17 +59,19 @@ namespace GerenciamentoPatrimonio.Repositorys
                 return;
             }
 
-            Endereco enderecoBanco = _context.Endereco.Find(endereco.EnderecoID)!;
+            Endereco EntidadeEndereco = _context.Endereco.Find(endereco.EnderecoID)!;
 
-            if (enderecoBanco == null)
+            if (EntidadeEndereco == null)
             {
                 return;
             }
 
-            enderecoBanco.Logradouro = endereco.Logradouro;
-            enderecoBanco.Numero = endereco.Numero;
-            enderecoBanco.Complemento = endereco.Complemento;
-            enderecoBanco.BairroID = endereco.BairroID;
+            EntidadeEndereco.Logradouro = endereco.Logradouro;
+            EntidadeEndereco.Numero = endereco.Numero;
+            EntidadeEndereco.Complemento = endereco.Complemento;
+            EntidadeEndereco.BairroID = endereco.BairroID;
+
+
 
             _context.SaveChanges();
         }

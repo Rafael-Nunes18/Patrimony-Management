@@ -43,7 +43,7 @@ namespace GerenciamentoPatrimonio.Repositorys
 
             Cidade EntidadeCidade = _context.Cidade.Find(cidade.CidadeID)!;
 
-            if (cidade == null)
+            if (EntidadeCidade == null)
             {
                 return;
             }

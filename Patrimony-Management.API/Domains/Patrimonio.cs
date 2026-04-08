@@ -29,5 +29,4 @@ public partial class Patrimonio
 
     public virtual StatusPatrimonio StatusPatrimonio { get; set; } = null!;
 
-    public virtual TipoPatrimonio TipoPatrimonio { get; set; } = null!;
 }

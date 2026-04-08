@@ -43,6 +43,9 @@ builder.Services.AddScoped<EnderecoService>();
 builder.Services.AddScoped<IBairroRepository, BairroRepository>();
 builder.Services.AddScoped<BairroService>();
 
+builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
+builder.Services.AddScoped<TipoUsuarioService>();
+
 
 
 var app = builder.Build();

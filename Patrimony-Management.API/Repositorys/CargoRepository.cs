@@ -37,7 +37,19 @@ namespace GerenciamentoPatrimonio.Repositorys
 
         public void Atualizar(Cargo cargo)
         {
-            _context.Cargo.Update(cargo);
+            if(cargo == null)
+            {
+                return;
+            }
+
+            Cargo Entidadecargos = _context.Cargo.Find(cargo.CargoID)!;
+
+            if(Entidadecargos == null)
+            {
+                return;
+            }
+
+            Entidadecargos.NomeCargo = cargo.NomeCargo;
             _context.SaveChanges();
         }
     }

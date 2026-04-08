@@ -50,12 +50,6 @@ namespace GerenciamentoPatrimonio.Applications.Services
         {
             Validar.ValidarNome(dto.NomeBairro);
 
-            Bairro bairroExistente = _repository.BuscarPorNome(dto.NomeBairro, dto.CidadeID);
-
-            if (bairroExistente != null)
-            {
-                throw new DomainException("Já existe um bairro com esse nome nessa cidade.");
-            }
 
             if (!_repository.CidadeExiste(dto.CidadeID))
             {
@@ -82,12 +76,7 @@ namespace GerenciamentoPatrimonio.Applications.Services
                 throw new DomainException("Bairro não encontrado.");
             }
 
-            Bairro bairroExistente = _repository.BuscarPorNome(dto.NomeBairro, dto.CidadeID);
-
-            if (bairroExistente != null && bairroExistente.BairroID != bairroId)
-            {
-                throw new DomainException("Já existe um bairro com esse nome nessa cidade.");
-            }
+           
 
             if (!_repository.CidadeExiste(dto.CidadeID))
             {
