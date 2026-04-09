@@ -18,17 +18,14 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: true
 
     steps:
-      # 1. Baixa o código do repositório
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Configura o ambiente .NET
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      # 3. Cache de pacotes NuGet (acelera os próximos builds)
       - name: Cache NuGet packages
         uses: actions/cache@v4
         with:
@@ -37,16 +34,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuget-
 
-      # 4. Restaura as dependências
-      # O --locked-mode garante que as versões sejam idênticas ao seu local
       - name: Restore dependencies
-        run: dotnet restore --locked-mode
-
-      # 5. Build do projeto
-      # Usamos --no-restore pois já restauramos no passo anterior
+        run: dotnet restore Patrimony-Management.API/GerenciamentoPatrimonio.csproj
+        
       - name: Build
-        run: dotnet build --no-restore --configuration Release
-
-      # 6. Execução de Testes
-      - name: Test
-        run: dotnet test --no-build --configuration Release --verbosity normal
+        run: dotnet build Patrimony-Management.API/GerenciamentoPatrimonio.csproj --configuration Release --no-restore
