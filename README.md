@@ -19,12 +19,12 @@ This project also serves as a practical implementation of modern backend develop
 
 ##  Project Roadmap
 
-- [x] **Backend API Structure:** Layered architecture implemented  
+- [ ] **Backend API Structure:** Layered architecture implemented  
 - [x] **Database Modeling:** Core entities and relationships created  
 - [x] **CI/CD Pipeline:** Automated build, analysis, and deployment  
 - [x] **Cloud Deployment:** Application deployed and running  
 - [ ] **Authentication & Authorization:** Security layer improvements  
-- [ ] **Frontend Integration:** Web interface (planned enhancements)  
+      
 ---
 
 ##  Tech Stack
