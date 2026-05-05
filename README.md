@@ -19,7 +19,7 @@ This project also serves as a practical implementation of modern backend develop
 
 ##  Project Roadmap
 
-- [ ] **Backend API Structure:** Layered architecture implemented  
+- [X] **Backend API Structure:** Layered architecture implemented  
 - [x] **Database Modeling:** Core entities and relationships created  
 - [x] **CI/CD Pipeline:** Automated build, analysis, and deployment  
 - [x] **Cloud Deployment:** Application deployed and running  
@@ -54,9 +54,15 @@ This project also serves as a practical implementation of modern backend develop
 
 ##  API Documentation
 
-Once the API is running, Swagger will be available at:
+The API is live and publicly available on Azure:
 
-- https://localhost:7179/swagger
+🔗 Swagger UI:  
+https://patrimony-management-c6anfyhnayasckez.canadacentral-01.azurewebsites.net/swagger
+
+🌐 Base URL:  
+https://patrimony-management-c6anfyhnayasckez.canadacentral-01.azurewebsites.net/
+
+> ⚠️ Some endpoints may be incomplete or subject to change.
 
 ---
 
