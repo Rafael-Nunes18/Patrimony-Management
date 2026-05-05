@@ -56,7 +56,7 @@ This project also serves as a practical implementation of modern backend develop
 
 Once the API is running, Swagger will be available at:
 
-- https://localhost:{port}/swagger
+- https://localhost:7179/swagger
 
 ---
 
