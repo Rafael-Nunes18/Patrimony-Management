@@ -59,9 +59,6 @@ The API is live and publicly available on Azure:
 🔗 Swagger UI:  
 https://patrimony-management-c6anfyhnayasckez.canadacentral-01.azurewebsites.net/swagger
 
-🌐 Base URL:  
-https://patrimony-management-c6anfyhnayasckez.canadacentral-01.azurewebsites.net/
-
 > ⚠️ Some endpoints may be incomplete or subject to change.
 
 ---
